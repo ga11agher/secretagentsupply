@@ -69,13 +69,47 @@ header img {
   text-transform: uppercase;
 }
 
+body {
+  line-height: 1.4em;
+}
+
+.product-grid, .business-info {
+  display: flex;
+  justify-content: space-between;
+  margin: 3em 0 0 0;
+}
+
+.business-info span {
+  color: black;
+}
+
 .container {
   max-width: 960px;
   margin: 0 auto;
 }
 
+.description {
+  background-color: black;
+  color: white;
+  display: block;
+  padding: 0.5em;
+  text-align: center;
+}
+
 div {
   display: block;
+}
+
+.info {
+  width: 35%;
+  justify-content: center;
+}
+
+.info .title {
+  background-color: black;
+  color: white;
+  display: block;
+  padding: 1em 2em;
 }
 
 .item {
@@ -105,8 +139,18 @@ div {
   text-align: center;
 }
 
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+.mobile-nav {
+  display: none;
+}
+
 nav {
   background-color: firebrick;
+  display: block;
 }
 
 nav li {
@@ -136,4 +180,49 @@ footer {
   margin-top: 4em;
   padding: 5rem 0;
   text-align: left;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+  .info {
+    width: 35%;
+  }
+  .mobile-nav {
+    display: block;
+    text-align: center;
+  }
+  nav ul {
+    display: none;
+  }
+  .item {
+    width: 47%;
+  }
+  .item.glasses {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .banner-main {
+    height: 15rem;
+  }
+  .business-info {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+  }
+  footer {
+    text-align: center;
+  }
+  .item {
+    width: 90%;
+    margin-bottom: 0.5rem;
+  }
+  .item.watch {
+    display: none;
+  }
 }
